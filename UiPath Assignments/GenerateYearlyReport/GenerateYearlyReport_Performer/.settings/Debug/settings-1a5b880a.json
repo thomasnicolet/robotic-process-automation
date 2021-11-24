@@ -17,7 +17,7 @@
   "UiPath.UiAutomation.Activities.RobotLogging.LogTargetInfo": "False",
   "UiPath.UiAutomation.Activities.Callout.Timer": "0",
   "UiPath.UiAutomation.Activities.DataScrape.DelayBetweenPagesMS": "300",
-  "UiPath.UiAutomation.Activities.ElementExists.TimeoutMS": "1000",
+  "UiPath.UiAutomation.Activities.ElementExists.TimeoutMS": "5000",
   "UiPath.UiAutomation.Activities.Highlight.HighlightTime": "1000",
   "UiPath.UiAutomation.Activities.KeyboardEvents.SendWindowMessages": "False",
   "UiPath.UiAutomation.Activities.KeyboardEvents.ClickBeforeTyping": "False",

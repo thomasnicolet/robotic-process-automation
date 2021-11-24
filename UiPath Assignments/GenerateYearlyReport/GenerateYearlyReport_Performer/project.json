@@ -3,6 +3,7 @@
   "description": "Reads queue elements (Work Item ID's extracted from ACME System 1). Reads monthly reports, merges to yearly report, uploads it and updates work item.",
   "main": "Main.xaml",
   "dependencies": {
+    "Microsoft.Activities.Extensions": "[2.0.6.9]",
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.System.Activities": "[21.10.2]",
     "UiPath.Testing.Activities": "[1.4.3]",
