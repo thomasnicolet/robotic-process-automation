@@ -5930,9 +5930,9 @@
     "restore": {
       "projectUniqueName": "GenerateYearlyReport_Dispatcher",
       "projectName": "GenerateYearlyReport_Dispatcher",
-      "projectPath": "C:\\Users\\tsn\\Documents\\github\\robotic-process-automation\\UiPath Assignment 1\\GenerateYearlyReport\\Dispatcher_GenerateYearlyReport\\.local",
+      "projectPath": "C:\\Users\\tsn\\Documents\\github\\robotic-process-automation\\UiPath Assignments\\GenerateYearlyReport\\GenerateYearlyReport_Dispatcher\\.local",
       "packagesPath": "C:\\Users\\tsn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tsn\\Documents\\github\\robotic-process-automation\\UiPath Assignment 1\\GenerateYearlyReport\\Dispatcher_GenerateYearlyReport\\.local"
+      "outputPath": "C:\\Users\\tsn\\Documents\\github\\robotic-process-automation\\UiPath Assignments\\GenerateYearlyReport\\GenerateYearlyReport_Dispatcher\\.local"
     },
     "frameworks": {
       "net461": {
