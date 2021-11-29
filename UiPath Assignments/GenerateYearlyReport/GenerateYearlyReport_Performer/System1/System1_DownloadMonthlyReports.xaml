@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1232,3648</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2036,3446</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DownloadMonthlyReports_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -75,7 +75,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DownloadMonthlyReports" sap:VirtualizedContainerService.HintSize="718,3583" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DownloadMonthlyReports" sap:VirtualizedContainerService.HintSize="718,3381" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="allMonths" />
       <Variable x:TypeArguments="x:String" Name="specificReportPath" />
@@ -86,26 +86,26 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="676,3491" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="8c4ee8cd1ce101324e36485744b3efb2" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Acme System1" sap:VirtualizedContainerService.HintSize="676,3289" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="8c4ee8cd1ce101324e36485744b3efb2" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <TryCatch sap2010:Annotation.AnnotationText="Try downloading monthly report given input details" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="642,3345" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch sap2010:Annotation.AnnotationText="Try downloading monthly report given input details" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="642,3143" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence sap:VirtualizedContainerService.HintSize="604,3087" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Download monthly reports" sap:VirtualizedContainerService.HintSize="604,2880" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assigning worklow local variables. We want to go through all months, and the current year.&#xA;NB: Current year (2021) does is not updated in UiPath's System1, so year 2020 is hardcoded" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="562,203" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assigning worklow local variables. We want to go through all months, and the current year.&#xA;NB: Current year (2021) does is not updated in UiPath's System1, so year 2020 is hardcoded" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="562,207" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                   <ui:MultipleAssign.AssignOperations>
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -132,10 +132,15 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:MultipleAssign>
-                <ui:InvokeCode ContinueOnError="{x:Null}" Code="Array.ForEach(Directory.GetFiles(monthlyReportsPath),Sub(x) File.Delete(x))" DisplayName="Delete all files in data output" sap:VirtualizedContainerService.HintSize="562,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Delete files already existing in folder, ready for new ones" Code="Array.ForEach(Directory.GetFiles(monthlyReportsPath),Sub(x) File.Delete(x))" DisplayName="Delete all files in data output" sap:VirtualizedContainerService.HintSize="562,208" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                   <ui:InvokeCode.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="monthlyReportsPath">[monthlyReportsPath]</InArgument>
                   </ui:InvokeCode.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </ui:InvokeCode>
                 <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Only need to do this once" DisplayName="Type into Vendor Tax ID" EmptyField="True" sap:VirtualizedContainerService.HintSize="562,165" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_vendorTaxID]">
                   <ui:TypeInto.Target>
@@ -154,7 +159,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:TypeInto>
-                <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Items="{x:Null}" sap2010:Annotation.AnnotationText="Select current year. Only need to do this once, so is done outside loop&#xA;" DisplayName="Select Item" sap:VirtualizedContainerService.HintSize="562,153" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="[in_currentYear]">
+                <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Items="{x:Null}" sap2010:Annotation.AnnotationText="Select current year. Only need to do this once, so is done outside loop&#xA;" DisplayName="Select given year" sap:VirtualizedContainerService.HintSize="562,156" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="[in_currentYear]">
                   <ui:SelectItem.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d0067fef-3547-4a6a-bd43-42927d54b5a7" Selector="&lt;webctrl id='reportYear' tag='SELECT' name='reportYear' /&gt;" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
@@ -168,13 +173,13 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:SelectItem>
-                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,2150" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[allMonths]">
+                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each Month in All Months" sap:VirtualizedContainerService.HintSize="562,1892" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[allMonths]">
                   <ui:ForEach.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="month" />
                       </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="526,2027" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <Sequence sap:VirtualizedContainerService.HintSize="526,1768" sap2010:WorkflowViewState.IdRef="Sequence_3">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:Boolean" Name="noReportFound" />
                         </Sequence.Variables>
@@ -183,7 +188,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Items="{x:Null}" DisplayName="Select Item" sap:VirtualizedContainerService.HintSize="484,96" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[month.ToString]">
+                        <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Items="{x:Null}" DisplayName="Select Month" sap:VirtualizedContainerService.HintSize="484,96" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[month.ToString]">
                           <ui:SelectItem.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a2b2c363-a2e5-48e2-ac17-6bfadec81271" Selector="&lt;webctrl tag='SELECT' name='reportMonth' /&gt;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -192,7 +197,7 @@
                             </ui:Target>
                           </ui:SelectItem.Target>
                         </ui:SelectItem>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  buttonDownload'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="False">
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click download report button" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="False">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition Position="Center">
                               <ui:CursorPosition.OffsetX>
@@ -223,9 +228,9 @@
                             </ui:Target>
                           </ui:UiElementExists.Target>
                         </ui:UiElementExists>
-                        <If Condition="[noReportFound]" sap:VirtualizedContainerService.HintSize="484,560" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If Condition="[noReportFound]" DisplayName="If report not found" sap:VirtualizedContainerService.HintSize="484,565" sap2010:WorkflowViewState.IdRef="If_1">
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="376,384" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <Sequence DisplayName="Close popup and continue" sap:VirtualizedContainerService.HintSize="376,386" sap2010:WorkflowViewState.IdRef="Sequence_6">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -253,7 +258,7 @@
                                   </ui:Target>
                                 </ui:Click.Target>
                               </ui:Click>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[String.Format(&quot;No report found for {0} in {1}&quot;, in_vendorTaxID, month.ToString)]" />
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[String.Format(&quot;No report found for {0} in {1}&quot;, in_vendorTaxID, month.ToString)]" />
                               <ui:Continue sap2010:Annotation.AnnotationText="Continue to next month" sap:VirtualizedContainerService.HintSize="334,53" sap2010:WorkflowViewState.IdRef="Continue_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -273,15 +278,20 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign sap2010:Annotation.AnnotationText="" DisplayName="Assign report path" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="Assign_1">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[specificReportPath]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
                             <InArgument x:TypeArguments="x:String">[monthlyReportsPath + in_vendorTaxID + "-" + in_currentYear + "-" + month.ToString]</InArgument>
                           </Assign.Value>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
                         </Assign>
-                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="NB: We have to send a backspace because SimulateClick for TypeInto does not seem to work. It saves the default filename, instead of the file name typed into the field." DisplayName="Send Hotkey 'Edit'" sap:VirtualizedContainerService.HintSize="484,224" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="back" KeyModifiers="None" SpecialKey="True">
+                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="NB: We have to send a backspace because SimulateClick for TypeInto does not seem to work. It saves the default filename, instead of the file name typed into the field." DisplayName="Send Hotkey &quot;back&quot;" sap:VirtualizedContainerService.HintSize="484,230" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="back" KeyModifiers="None" SpecialKey="True">
                           <ui:SendHotkey.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="98bd1279-a486-4af1-9355-a099c637eb4d" InformativeScreenshot="cd9e23014f878e79a2223c8ea3b839ca" Selector="&lt;wnd app='chrome.exe' cls='#*' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='*' aaname='File name:' /&gt;">
                               <ui:Target.TimeoutMS>
@@ -307,18 +317,6 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,261" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                          <ui:CommentOut.Body>
-                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[String.Format(&quot;Saving report Tax ID: {0}, year: {1}, month: {2}.&quot;, in_vendorTaxID,  in_currentYear, month.ToString)]" />
-                            </Sequence>
-                          </ui:CommentOut.Body>
-                        </ui:CommentOut>
                         <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Save button" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition Position="Center">
@@ -348,7 +346,7 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="608,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="608,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>

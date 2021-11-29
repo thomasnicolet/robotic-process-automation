@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1591,2150</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1945,2150</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="62">
@@ -79,19 +79,19 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_Login" sap:VirtualizedContainerService.HintSize="915,2085" sap2010:WorkflowViewState.IdRef="Sequence_10">
+  <Sequence DisplayName="Login to Acme System1" sap:VirtualizedContainerService.HintSize="915,2085" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Private: Attach Browser 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="873,1993" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="ba1b8cafba00dd2a5f871b01612e9a4a" Selector="&lt;html app='chrome.exe' title='ACME System 1 - *' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Acme System1 browser" sap:VirtualizedContainerService.HintSize="873,1993" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="ba1b8cafba00dd2a5f871b01612e9a4a" Selector="&lt;html app='chrome.exe' title='ACME System 1 - *' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="839,1847" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="Login logic" sap:VirtualizedContainerService.HintSize="839,1847" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="isLoggedIn" />
             </Sequence.Variables>
@@ -118,7 +118,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:UiElementExists>
-            <If Condition="[isLoggedIn]" sap:VirtualizedContainerService.HintSize="797,806" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[isLoggedIn]" DisplayName="If logged in" sap:VirtualizedContainerService.HintSize="797,806" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
@@ -204,7 +204,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:UiElementExists>
-            <If Condition="[isLoggedIn]" sap:VirtualizedContainerService.HintSize="797,402" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[isLoggedIn]" DisplayName="If logged in now" sap:VirtualizedContainerService.HintSize="797,402" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>

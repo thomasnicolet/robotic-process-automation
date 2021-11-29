@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>951,565</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1396,633</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_NavigateWorkItemDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -72,7 +72,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Private: Attach Browser 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="434,205" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="24e46852d03862b22e86a0f105adda7f" Selector="&lt;html app='chrome.exe' title='ACME System 1 - *' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach to browser" sap:VirtualizedContainerService.HintSize="434,205" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="24e46852d03862b22e86a0f105adda7f" Selector="&lt;html app='chrome.exe' title='ACME System 1 - *' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>951,940</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1396,982</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_ExtractWorkItemHash_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -64,20 +64,20 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Extracts hash from SHA1Online.com, based on client id, client name and client country, concatenated with (-) hyphen&#xD;&#xA;" DisplayName="Extract hash of client details" sap:VirtualizedContainerService.HintSize="476,875" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Extracts hash from SHA1Online.com, based on client id, client name and client country, concatenated with (-) hyphen&#xA;" DisplayName="Extract hash of client details" sap:VirtualizedContainerService.HintSize="476,917" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Private: Attach Browser" sap:VirtualizedContainerService.HintSize="434,726" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="d8c4a25f423f20bf3041499a2abd1611" Selector="&lt;html app='chrome.exe' title='SHA1 online' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach to sha1-online.com" sap:VirtualizedContainerService.HintSize="434,768" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="d8c4a25f423f20bf3041499a2abd1611" Selector="&lt;html app='chrome.exe' title='SHA1 online' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,580" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,622" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -129,7 +129,13 @@
                 <OutArgument x:TypeArguments="x:String">[out_hashResult]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <ui:GoBack Browser="{x:Null}" DisplayName="Go Back" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="GoBack_1" />
+            <ui:GoBack Browser="{x:Null}" sap2010:Annotation.AnnotationText="Go back (to main home page), ready for next iteration" DisplayName="Go Back" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GoBack_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:GoBack>
           </Sequence>
         </ActivityAction>
       </ui:BrowserScope.Body>
