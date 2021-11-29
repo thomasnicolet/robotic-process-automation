@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1396,2192</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>997,2192</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="62">
@@ -85,7 +85,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach to Acme System1" sap:VirtualizedContainerService.HintSize="873,2035" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="ba1b8cafba00dd2a5f871b01612e9a4a" Selector="&lt;html app='chrome.exe' title='ACME System 1 - *' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Private: Attach to Acme System1" sap:VirtualizedContainerService.HintSize="873,2035" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="ba1b8cafba00dd2a5f871b01612e9a4a" Selector="&lt;html app='chrome.exe' title='ACME System 1 - *' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -100,7 +100,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage sap2010:Annotation.AnnotationText="Log we are checking if logged in already&#xD;&#xA;" DisplayName="Log Message " sap:VirtualizedContainerService.HintSize="797,133" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[&quot;Checking if a user is already logged in...&quot;]">
+            <ui:LogMessage sap2010:Annotation.AnnotationText="Log we are checking if logged in already&#xA;" DisplayName="Log Message " sap:VirtualizedContainerService.HintSize="797,133" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[&quot;Checking if a user is already logged in...&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
